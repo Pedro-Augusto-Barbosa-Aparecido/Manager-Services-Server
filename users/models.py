@@ -25,7 +25,7 @@ class User(AbstractBaseUser, BaseUserManager):
     last_login = models.DateTimeField(blank=True, null=True)
     created_on = models.DateTimeField(auto_now_add=True)
 
-    permissions = models.ManyToManyField(Permission, blank=True, null=False)
+    permissions = models.ManyToManyField(Permission, blank=True)
 
     active = models.BooleanField(default=True)
 
